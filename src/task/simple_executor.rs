@@ -37,7 +37,7 @@ impl SimpleExecutor{
         while let Some(mut task) = self.tasks.pop_front(){
             let waker = dummy_waker();
             let mut context = Context::from_waker(&waker);
-            match(task.poll(&mut context)) {
+            match task.poll(&mut context) {
                 Poll::Pending => self.tasks.push_back(task),
                 Poll::Ready(()) => {}
             }

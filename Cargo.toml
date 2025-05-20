@@ -4,3 +4,23 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
+x86_64 = "0.14.10"
+pic8259 = "0.10.4"
+lazy_static = "1.4.0"
+spin = "0.9.8"
+pc-keyboard = "0.8.0"
+bootloader = "0.9.23"
+
+[dependencies.crossbeam-queue]
+version = "0.3.11"
+default-features = false
+features = ["alloc"]
+
+[dependencies.conquer-once]
+version = "0.2.0"
+default-features = false
+
+[dependencies.futures-util]
+version = "0.3.4"
+default-features = false
+features = ["alloc"]
